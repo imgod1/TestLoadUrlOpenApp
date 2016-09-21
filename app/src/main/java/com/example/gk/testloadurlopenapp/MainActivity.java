@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_go;
+    private Button btn_go1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initEvent() {
         btn_go.setOnClickListener(this);
+        btn_go1.setOnClickListener(this);
     }
 
     private void initView() {
         btn_go = (Button) findViewById(R.id.btn_go);
+        btn_go1 = (Button) findViewById(R.id.btn_go1);
     }
 
     @Override
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_go:
                 SecondActivity.actionStart(MainActivity.this, "从onClick点击事件中跳转过来");
+                break;
+            case R.id.btn_go1:
+                SecondActivity.actionStart1(MainActivity.this, "1008615555");
                 break;
         }
     }
